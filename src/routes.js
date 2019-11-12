@@ -1,11 +1,12 @@
 import { createAppContainer, createStackNavigator } from "react-navigation";
 
 //Pages
-import { Main, Podcast } from "./pages";
+import { Radio, Main, Podcast } from "./pages";
 
 const Routes = createAppContainer(
   createStackNavigator(
     {
+      Radio,
       Main,
       Podcast
     },

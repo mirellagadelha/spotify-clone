@@ -9,14 +9,10 @@ import {Service} from "../../services/service"
 import PodcastsActions from "../ducks/podcasts";
 
 export function* load() {
-
   try {
-    const  {data}  = yield call( Service.get);
-    //console.log(data);
-    
+    const  {data}  = yield call(Service.get);
     yield put(PodcastsActions.loadSuccess(data));
   } catch (err) {
-    console.log("teste2", err);
     yield put(PodcastsActions.loadFailure());
   }
 }
